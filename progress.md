@@ -474,10 +474,8 @@ temporary source images, and environment files remain ignored.
 **Change:** Added the approved public remote
 `https://github.com/Nabin-16/nabin-joshi.git` as `origin`.
 
-**Blocker:** The push was attempted but Git could not prompt for credentials in
-this non-interactive environment. No token or password was entered, stored, or
-exposed. The two local commits remain intact on `main`; push and GitHub Actions
-verification are pending user authentication.
+**Resolution:** The owner completed the authenticated push. No token or
+password was entered, stored, or exposed in the workspace.
 
 ### 2026-10-15 — GitHub Actions build passed; Pages setup pending
 
@@ -485,7 +483,17 @@ verification are pending user authentication.
 `38687674276`. Its build job passed `npm ci`, typecheck, lint, production
 build, and Pages artifact upload.
 
-**Blocker:** The deploy job returned HTTP 404 because GitHub Pages has not yet
-been enabled for `Nabin-16/nabin-joshi`. No workflow change is needed. Enable
-**Settings → Pages → Build and deployment → Source → GitHub Actions**, then
-rerun the workflow. DNS and custom-domain HTTPS remain unverified.
+**Resolution:** GitHub Pages was enabled with **GitHub Actions** as the source,
+and the workflow was rerun successfully.
+
+### 2026-10-15 — GitHub Pages deployment verified
+
+**Validation:** Workflow run `38688426287` completed successfully. Both build
+and deploy jobs passed, and the default Pages URL serves the homepage:
+`https://nabin-16.github.io/nabin-joshi/`. The deployed `robots.txt` and
+`sitemap.xml` were also fetched successfully.
+
+**Remaining:** `https://nabin-joshi.com.np` still fails hostname resolution
+from this environment. The custom domain must be added in Pages settings and
+the DNS provider must be configured before certificate and HTTPS verification
+can be completed.

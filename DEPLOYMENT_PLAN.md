@@ -67,21 +67,20 @@ performed manually in the domain provider dashboard.
 - [x] Inspect the staged diff before committing.
 - [x] Add the approved GitHub remote:
   `https://github.com/Nabin-16/nabin-joshi.git`.
-- [ ] Push after GitHub authentication is available; the attempted push was
-  blocked because this non-interactive environment had no credentials.
+- [x] Push after GitHub authentication was completed.
 
 ## Phase 4 — GitHub Pages deployment
 
 - [ ] Use the existing GitHub Actions workflow.
-- [ ] Configure GitHub Pages source as **GitHub Actions** in the repository
-  settings. The first deployment failed with HTTP 404 because Pages is not
-  enabled yet.
+- [x] Configure GitHub Pages source as **GitHub Actions** in the repository
+  settings.
 - [ ] Confirm the deployment branch is `main`.
 - [ ] Confirm workflow permissions are limited to contents read, Pages write,
   and identity-token write.
 - [ ] Push the approved commit.
 - [ ] Inspect workflow status and logs.
-- [ ] Verify the Pages deployment URL before considering deployment complete.
+- [x] Verify the Pages deployment URL:
+  `https://nabin-16.github.io/nabin-joshi/`.
 
 ## Phase 5 — Custom-domain activation
 
@@ -156,3 +155,8 @@ Owner approval is required before:
 - The first GitHub Actions build job passed, including `npm ci`, typecheck,
   lint, build, and artifact upload. The deploy job failed because GitHub Pages
   is not enabled for the repository; no workflow code change is required.
+- Workflow run `38688426287` succeeded for both build and deploy jobs. The
+  default Pages URL serves the homepage, `robots.txt`, and `sitemap.xml`.
+- The custom domain still does not resolve from this environment. DNS records,
+  the custom-domain setting, certificate issuance, and HTTPS enforcement remain
+  manual steps.
