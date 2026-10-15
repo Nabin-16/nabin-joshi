@@ -73,7 +73,9 @@ performed manually in the domain provider dashboard.
 ## Phase 4 — GitHub Pages deployment
 
 - [ ] Use the existing GitHub Actions workflow.
-- [ ] Configure GitHub Pages source as **GitHub Actions**.
+- [ ] Configure GitHub Pages source as **GitHub Actions** in the repository
+  settings. The first deployment failed with HTTP 404 because Pages is not
+  enabled yet.
 - [ ] Confirm the deployment branch is `main`.
 - [ ] Confirm workflow permissions are limited to contents read, Pages write,
   and identity-token write.
@@ -151,3 +153,6 @@ Owner approval is required before:
   tree, including the pinned Next.js patch and transitive build packages.
   No forced or breaking dependency upgrade was applied.
 - No token or password was entered, stored, or exposed during the blocked push.
+- The first GitHub Actions build job passed, including `npm ci`, typecheck,
+  lint, build, and artifact upload. The deploy job failed because GitHub Pages
+  is not enabled for the repository; no workflow code change is required.

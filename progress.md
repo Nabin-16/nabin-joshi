@@ -478,3 +478,14 @@ temporary source images, and environment files remain ignored.
 this non-interactive environment. No token or password was entered, stored, or
 exposed. The two local commits remain intact on `main`; push and GitHub Actions
 verification are pending user authentication.
+
+### 2026-10-15 — GitHub Actions build passed; Pages setup pending
+
+**Validation:** The pushed commit triggered workflow run
+`38687674276`. Its build job passed `npm ci`, typecheck, lint, production
+build, and Pages artifact upload.
+
+**Blocker:** The deploy job returned HTTP 404 because GitHub Pages has not yet
+been enabled for `Nabin-16/nabin-joshi`. No workflow change is needed. Enable
+**Settings → Pages → Build and deployment → Source → GitHub Actions**, then
+rerun the workflow. DNS and custom-domain HTTPS remain unverified.
