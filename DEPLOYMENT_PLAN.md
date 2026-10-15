@@ -58,14 +58,13 @@ performed manually in the domain provider dashboard.
 ## Phase 3 — Git repository preparation
 
 - [ ] Confirm the intended GitHub account, repository name, and visibility.
-- [ ] Review `.gitignore` against the actual Next.js project.
-- [ ] Check for secrets, `.env` files, credentials, private documents, and
+- [x] Review `.gitignore` against the actual Next.js project.
+- [x] Check for secrets, `.env` files, credentials, private documents, and
   generated artifacts.
-- [ ] Initialize Git only after owner approval because the folder currently has
-  no `.git` directory.
-- [ ] Create the first focused commit with a natural message such as
+- [x] Initialize Git after owner approval; the local branch is `main`.
+- [x] Create the first focused commit:
   `Prepare portfolio for production deployment`.
-- [ ] Inspect staged diff before every commit.
+- [x] Inspect the staged diff before committing.
 - [ ] Add the approved GitHub remote.
 - [ ] Push only after showing the exact remote, branch, and commit plan.
 
@@ -134,7 +133,7 @@ Owner approval is required before:
   `actions/deploy-pages`.
 - The canonical URL is now configured for `https://nabin-joshi.com.np`; DNS and
   HTTPS remain unverified.
-- The current folder is not a Git repository.
+- The local folder is now a Git repository on `main`; no remote is configured.
 - DNS resolution for the supplied domain could not be verified from the
   available environment during initial inspection.
 - Typecheck passed.

@@ -457,3 +457,14 @@ instruction text.
 The generated `out/` output contains `CNAME`, `robots.txt`, and `sitemap.xml`;
 canonical metadata points to the `.np` domain. GitHub repository, DNS, HTTPS,
 and live-site checks remain pending approval and account access.
+
+### 2026-10-15 — Initialized local Git repository
+
+**Change:** After owner approval, initialized Git on `main`, reviewed the
+staged file list and whitespace, confirmed no obvious credential or key
+patterns were present, and committed the production-ready project locally as
+`78da4b9` (`Prepare portfolio for production deployment`).
+
+**Safety:** No remote, GitHub repository, push, repository visibility change,
+DNS change, or nameserver change was performed. Generated output, dependencies,
+temporary source images, and environment files remain ignored.
