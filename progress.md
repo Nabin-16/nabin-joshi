@@ -468,3 +468,13 @@ patterns were present, and committed the production-ready project locally as
 **Safety:** No remote, GitHub repository, push, repository visibility change,
 DNS change, or nameserver change was performed. Generated output, dependencies,
 temporary source images, and environment files remain ignored.
+
+### 2026-10-15 — Configured approved GitHub remote
+
+**Change:** Added the approved public remote
+`https://github.com/Nabin-16/nabin-joshi.git` as `origin`.
+
+**Blocker:** The push was attempted but Git could not prompt for credentials in
+this non-interactive environment. No token or password was entered, stored, or
+exposed. The two local commits remain intact on `main`; push and GitHub Actions
+verification are pending user authentication.

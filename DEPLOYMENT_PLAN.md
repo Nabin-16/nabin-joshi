@@ -65,8 +65,10 @@ performed manually in the domain provider dashboard.
 - [x] Create the first focused commit:
   `Prepare portfolio for production deployment`.
 - [x] Inspect the staged diff before committing.
-- [ ] Add the approved GitHub remote.
-- [ ] Push only after showing the exact remote, branch, and commit plan.
+- [x] Add the approved GitHub remote:
+  `https://github.com/Nabin-16/nabin-joshi.git`.
+- [ ] Push after GitHub authentication is available; the attempted push was
+  blocked because this non-interactive environment had no credentials.
 
 ## Phase 4 — GitHub Pages deployment
 
@@ -133,7 +135,8 @@ Owner approval is required before:
   `actions/deploy-pages`.
 - The canonical URL is now configured for `https://nabin-joshi.com.np`; DNS and
   HTTPS remain unverified.
-- The local folder is now a Git repository on `main`; no remote is configured.
+- The local folder is now a Git repository on `main`; the approved `origin`
+  remote is configured, but the first push is still pending authentication.
 - DNS resolution for the supplied domain could not be verified from the
   available environment during initial inspection.
 - Typecheck passed.
@@ -147,3 +150,4 @@ Owner approval is required before:
 - `npm audit --omit=dev` reports vulnerabilities in the current dependency
   tree, including the pinned Next.js patch and transitive build packages.
   No forced or breaking dependency upgrade was applied.
+- No token or password was entered, stored, or exposed during the blocked push.
