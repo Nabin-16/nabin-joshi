@@ -1,6 +1,6 @@
 export const site = {
   name: "Nabin Joshi",
-  title: "Nabin Joshi — AI/ML engineer in progress",
+  title: "Nabin Joshi",
   description:
     "A personal site and technical notebook by Nabin Joshi, focused on data science, AI/ML, and practical systems.",
   url: "https://nabin-joshi.com.np",
