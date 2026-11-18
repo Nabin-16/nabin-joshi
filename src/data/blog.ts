@@ -108,7 +108,7 @@ export const posts: BlogPost[] = [
             ["Phi-4 Mini", "SciQ", "93.1%", "98.0%", "2.0%", "3.5%"],
           ],
         },
-        note: "Source: PRISM benchmark results. Values come from the published summary. The repository also holds additional runs that still need validation.",
+        note: "Source: PRISM benchmark results. Values come from the published summary. The repository also holds additional runs.",
       },
       {
         title: "Agreement and correctness are different measures",
@@ -354,7 +354,7 @@ export const posts: BlogPost[] = [
         paragraphs: [
           "I think every student sometimes wonders whether they’re good enough. You look at people with more experience, more knowledge, and more confidence, and you feel miles behind. You hold back from taking on responsibility because you aren’t sure you’re ready. That’s exactly how I felt going into X-Hack 3.0.",
           "The win didn’t turn me into an expert developer, and I still get nervous. What it gave me was a reason to believe I could take on a challenge even when I wasn’t sure of myself. Being a beginner doesn’t mean you have nothing to offer. Working with people who know more than you speeds up your learning. And sometimes the most important thing you can do is say yes when someone gives you a chance.",
-          "I also saw how much a good teammate or mentor can shape your path. Spandan dada’s guidance, working with Gaurav, and being on a team with Rasa dada all went into making that weekend special. We won together, but each of us took home our own lessons.",
+          "I also saw how much a good teammate or mentor can shape your path. Spandan dada’s guidance, working with Gaurav, and being on a team with Rasa didi all went into making that weekend special. We won together, but each of us took home our own lessons.",
         ],
       },
       {
@@ -382,7 +382,7 @@ export const posts: BlogPost[] = [
     ],
     linksTitle: "Explore Sanjaya",
     closingNote:
-      "A first hackathon, a nervous pitch, and a team that made the win possible.",
+      "A first hackathon, and a team that made the win possible.",
   },
 ];
 

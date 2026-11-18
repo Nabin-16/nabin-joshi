@@ -524,6 +524,9 @@ h3 {
   font-size: 1.12rem;
   line-height: 1.8;
 }
+.blog-article-body p {
+  color: var(--muted);
+}
 .article-intro {
   color: var(--fg);
   font-size: clamp(1.3rem, 2vw, 1.55rem);
