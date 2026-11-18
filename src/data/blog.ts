@@ -1,10 +1,16 @@
+import type { StaticImageData } from "next/image";
+import img1 from "@/assets/images/img-1.webp";
+import img2 from "@/assets/images/img-2.webp";
+import img3 from "@/assets/images/img-3.webp";
+import roboticsClubTeam from "@/assets/images/robotics-club-team.webp";
+
 export type BlogTable = {
   headers: string[];
   rows: string[][];
 };
 
 export type BlogImage = {
-  src: string;
+  src: StaticImageData;
   alt: string;
   width: number;
   height: number;
@@ -245,7 +251,7 @@ export const posts: BlogPost[] = [
     intro:
       "When I first walked into Basic Robotics Training as a fresher, I was just curious. I wanted to know how things worked, how an idea turns into a real system, and what it would take to build something myself. I had no idea that small step would end up being such a big part of my university life.",
     image: {
-      src: "/robotics-club-team.png",
+      src: roboticsClubTeam,
       alt: "Robotics Club members standing together outdoors",
       width: 1160,
       height: 768,
@@ -349,7 +355,7 @@ export const posts: BlogPost[] = [
           "A hackathon teaches you tech, but it also teaches you how to learn under pressure. You don’t have to know everything before you begin. You can start, ask questions, listen to people who know more than you, and work it out together. That was one of the first real lessons I got about building something with a team.",
         ],
         image: {
-          src: "/img-3.jpg",
+          src: img3,
           alt: "Sanjaya team members holding certificates and their hackathon prize",
           width: 1025,
           height: 768,
@@ -373,7 +379,7 @@ export const posts: BlogPost[] = [
           "The money and the trophy were nice. What hit me harder was that we had actually done it. We took an idea, pushed through the uncertainty, learned from each other, presented it, and somehow won a competition we hadn’t expected to win. That gave my confidence a huge boost.",
         ],
         image: {
-          src: "/img-1.jpg",
+          src: img1,
           alt: "Nabin Joshi holding the X-Hack 3.0 trophy and certificates",
           width: 768,
           height: 1024,
@@ -397,7 +403,7 @@ export const posts: BlogPost[] = [
           "Your first big win tells you that you did something well, and it also makes you start to believe you might be able to do a lot more.",
         ],
         image: {
-          src: "/img-2.jpg",
+          src: img2,
           alt: "Sanjaya teammates celebrating their X-Hack 3.0 win with certificates and prize cheque",
           width: 768,
           height: 1024,

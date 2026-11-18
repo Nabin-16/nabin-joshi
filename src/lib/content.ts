@@ -1,9 +1,17 @@
+import type { StaticImageData } from "next/image";
+import artemisTeam from "@/assets/images/artemis-team.webp";
+import prismBenchmark from "@/assets/images/prism-benchmark.webp";
+import roboticArmDemo from "@/assets/images/robotic-arm-demo.webp";
+import robolinexTeam from "@/assets/images/robolinex-team.webp";
+import sanjayaTeam from "@/assets/images/sanjaya-team.webp";
+import saveikaTeam from "@/assets/images/saveika-team.webp";
+
 export type Project = {
   slug: string;
   title: string;
   summary: string;
   description: string;
-  image?: string;
+  image?: StaticImageData;
   imageAlt?: string;
   stack: string[];
   repoUrl?: string;
@@ -25,7 +33,7 @@ export const projects: Project[] = [
       "A benchmark for testing whether small language models change their answers when the same question is phrased differently.",
     description:
       "PRISM studies prompt sensitivity in educational multiple-choice question answering using local Small Language Model inference through Ollama on CPU-only hardware.",
-    image: "/prism-benchmark.png",
+    image: prismBenchmark,
     imageAlt: "PRISM prompt reliability benchmark title graphic",
     stack: [
       "Python",
@@ -52,7 +60,7 @@ export const projects: Project[] = [
       "An autonomous line-following robot that maps a maze, simplifies its route, and replays the optimized path.",
     description:
       "RobolineX is competition firmware for an Arduino Nano robot that combines QTR sensors, PID motion control, EEPROM route storage, and path optimization to navigate a maze.",
-    image: "/robolinex-team.png",
+    image: robolinexTeam,
     imageAlt:
       "RobolineX team members holding competition certificates and medals",
     stack: [
@@ -81,7 +89,7 @@ export const projects: Project[] = [
       "A real-time tracking system that bridges mobile sensor data through an ESP32 to a live admin dashboard.",
     description:
       "Artemis captures GPS and sensor data from mobile devices, forwards it through an ESP32 access-point and station bridge, and visualizes connected devices in a Flask-powered dashboard.",
-    image: "/artemis-team.png",
+    image: artemisTeam,
     imageAlt: "Artemis project team standing together in a university corridor",
     stack: ["ESP32", "PlatformIO", "C++", "Flask", "GPS", "IMU data"],
     repoUrl: "https://github.com/Nabin-16/artemis",
@@ -102,7 +110,7 @@ export const projects: Project[] = [
       "A mobile-first mental health screening and escalation platform for Community Health Workers and supervisors in Nepal.",
     description:
       "Saveika helps field workers capture household visit signals, calculate mental health risk, and give supervisors a clearer view of households that may need urgent follow-up.",
-    image: "/saveika-team.png",
+    image: saveikaTeam,
     imageAlt: "Saveika hackathon team members with their mentor",
     stack: [
       "Next.js",
@@ -131,7 +139,7 @@ export const projects: Project[] = [
       "A low-cost, AI-powered communication device that turns one controllable input into spoken sentences.",
     description:
       "Sanjaya helps people with motor and linguistic dysfunctions communicate through a single input signal, translating Morse-like timing into letters, predicted words, complete sentences, and speech.",
-    image: "/sanjaya-team.png",
+    image: sanjayaTeam,
     imageAlt:
       "Sanjaya hackathon team holding certificates and a winning trophy",
     stack: [
@@ -160,7 +168,7 @@ export const projects: Project[] = [
       "A gesture-controlled robotic arm that translates hand movements into servo commands.",
     description:
       "This project uses a webcam and hand tracking to control a robotic arm. MediaPipe detects hand landmarks, Python interprets gestures, and commands travel over serial to an Arduino-driven servo controller.",
-    image: "/robotic-arm-demo.png",
+    image: roboticArmDemo,
     imageAlt:
       "A robotic arm computer vision project being demonstrated at an exhibition",
     stack: [

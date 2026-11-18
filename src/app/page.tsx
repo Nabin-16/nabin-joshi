@@ -4,6 +4,7 @@ import { featuredPosts } from "@/data/blog";
 import { PostCard, ProjectCard } from "@/components/content-card";
 import { SkillsSection } from "@/components/skills-section";
 import Image from "next/image";
+import profileImage from "@/assets/images/profile.jpeg";
 
 export default function Home() {
   return (
@@ -40,10 +41,9 @@ export default function Home() {
         >
           <Image
             className="profile-image"
-            src="/profile.jpeg"
+            src={profileImage}
             alt="Nabin Joshi outdoors in a garden"
-            width={1200}
-            height={1600}
+            placeholder="blur"
             priority
           />
           <div className="workbench-grid" aria-hidden="true" />

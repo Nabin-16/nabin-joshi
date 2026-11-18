@@ -55,6 +55,7 @@ function BlogSectionContent({ section }: { section: BlogSection }) {
           alt={section.image.alt}
           width={section.image.width}
           height={section.image.height}
+          placeholder="blur"
         />
       )}
     </section>
@@ -79,6 +80,8 @@ export function BlogPost({ post }: { post: BlogPost }) {
             alt={post.image.alt}
             width={post.image.width}
             height={post.image.height}
+            placeholder="blur"
+            priority
           />
         )}
       </header>

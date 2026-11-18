@@ -66,6 +66,7 @@ export function ProjectCaseStudy({ project }: ProjectCaseStudyProps) {
               alt={project.imageAlt ?? ""}
               width={800}
               height={450}
+              placeholder="blur"
               priority
             />
           ) : (

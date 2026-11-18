@@ -29,6 +29,7 @@ export function ProjectCard({
           alt={project.imageAlt ?? ""}
           width={320}
           height={180}
+          placeholder="blur"
         />
       ) : (
         <span
