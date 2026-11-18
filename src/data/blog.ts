@@ -14,6 +14,7 @@ export type BlogSection = {
   title: string;
   paragraphs?: string[];
   list?: string[];
+  definitions?: { term: string; definition: string }[];
   table?: BlogTable;
   note?: string;
   image?: BlogImage;
@@ -64,16 +65,45 @@ export const posts: BlogPost[] = [
           "Models run through Ollama, so the experiments work on ordinary hardware without paid APIs. The set is Llama 3.2 3B, Gemma 3 4B, Mistral 7B, and Phi-4 Mini (3.8B). Later result records also include Qwen 2.5 in 0.5B and 3B sizes. These models don’t represent every small language model. The goal is to compare how they behave under the same setup.",
           "Fair comparison needs consistent answer extraction and scoring. A response that ignores the requested format shouldn’t automatically count as a wrong answer, so instruction compliance is measured separately from correctness.",
         ],
-        list: [
-          "Accuracy: how often the answer is correct.",
-          "Conditional accuracy: accuracy over the response subset the protocol defines.",
-          "Answer recovery: whether the model gets the right answer under another formulation after an initial miss.",
-          "Instruction compliance: whether the response follows the requested output format.",
-          "Question majority accuracy: whether the most common answer across formulations is correct.",
-          "Agreement: how consistently the model answers the same question.",
-          "Prompt sensitivity: how much responses vary across formulations.",
-          "Answer unanimity: how often all formulations give the same answer.",
-          "Prompt-invariant incorrect rate: how often the model gives a stable but wrong answer.",
+        definitions: [
+          { term: "Accuracy", definition: "How often the answer is correct." },
+          {
+            term: "Conditional accuracy",
+            definition:
+              "Accuracy over the response subset the protocol defines.",
+          },
+          {
+            term: "Answer recovery",
+            definition:
+              "Whether the model gets the right answer under another formulation after an initial miss.",
+          },
+          {
+            term: "Instruction compliance",
+            definition:
+              "Whether the response follows the requested output format.",
+          },
+          {
+            term: "Question majority accuracy",
+            definition:
+              "Whether the most common answer across formulations is correct.",
+          },
+          {
+            term: "Agreement",
+            definition: "How consistently the model answers the same question.",
+          },
+          {
+            term: "Prompt sensitivity",
+            definition: "How much responses vary across formulations.",
+          },
+          {
+            term: "Answer unanimity",
+            definition: "How often all formulations give the same answer.",
+          },
+          {
+            term: "Prompt-invariant incorrect rate",
+            definition:
+              "How often the model gives a stable but wrong answer.",
+          },
         ],
       },
       {

@@ -15,6 +15,16 @@ function BlogSectionContent({ section }: { section: BlogSection }) {
           ))}
         </ul>
       )}
+      {section.definitions && (
+        <dl className="article-definitions">
+          {section.definitions.map(({ term, definition }) => (
+            <div className="article-definition" key={term}>
+              <dt>{term}</dt>
+              <dd>{definition}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
       {section.table && (
         <div className="article-table-wrap">
           <table>

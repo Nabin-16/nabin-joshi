@@ -548,6 +548,26 @@ h3 {
 .article-section li {
   margin: 0.4rem 0;
 }
+.article-definitions {
+  display: grid;
+  gap: 0.9rem;
+  margin: 1.5rem 0 0;
+}
+.article-definition {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.4fr) minmax(0, 1fr);
+  gap: 0.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.9rem;
+}
+.article-definition dt {
+  color: var(--fg);
+  font-weight: 700;
+}
+.article-definition dd {
+  margin: 0;
+  color: var(--muted);
+}
 .article-table-wrap {
   overflow-x: auto;
   margin: 1.5rem 0;
@@ -759,6 +779,10 @@ h3 {
   .blog-article-body {
     padding-top: 2rem;
     font-size: 1.05rem;
+  }
+  .article-definition {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
   }
   .hero {
     grid-template-columns: 1fr;
