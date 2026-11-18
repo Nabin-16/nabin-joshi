@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
 
 :root {
   --bg: #171a17;
@@ -469,12 +468,6 @@ h3 {
 .footer-meta {
   color: var(--muted);
   margin: 0;
-}
-.prose {
-  max-width: 72ch;
-}
-.prose a {
-  color: var(--accent);
 }
 .blog-article {
   max-width: 780px;
